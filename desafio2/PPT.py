@@ -1,7 +1,7 @@
 from random import randint
 import time
 
-
+qntd_jogador = qntad_pc =0
 while True:
     print("JOGO DO PEDRA, PAPEL E TESOURA")
     print("VAMOS JOGAR")
@@ -38,11 +38,11 @@ while True:
             (jogador == 2 and computador == 1) or \
             (jogador == 3 and computador == 2):
         print("Jogador ganhou")
-        break
-    elif (jogador == 3 and computador == 1) or \
-            (jogador == 1 and computador == 2) or \
-            (jogador == 2 and computador == 3):
+        qntd_jogador += 1
+        
+    else: 
         print("Computador Ganhou")
+        qntad_pc += 1
 
 
 
@@ -52,3 +52,6 @@ while True:
     resp = input("Quer Continuar Sim ou Não: ").strip().lower()
     if resp != "s":
         break
+
+print(f"Quantidade de vezes que o jogador ganhou {qntd_jogador}")
+print(f'Quantidade de vezes que o computador ganhou {qntad_pc}')
